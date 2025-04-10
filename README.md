@@ -19,6 +19,39 @@ A lightweight and intuitive app to help you manage and organize your travel plan
 
 ## 🚀 Getting Started
 
+### 🛠️ Environment Setup
+
+This project uses environment variables to manage sensitive information like API keys.
+
+#### Step 1: Create your own `.env` file
+
+Copy the example template:
+
+```bash
+cp .env.sample .env
+```
+
+Then, update the values with your actual configuration:
+
+```env
+# Get your API key from https://pexels.com/api
+VITE_PEXELS_API_KEY=your-key-here
+
+# Base API URL for backend services (e.g., localhost or deployed endpoint)
+VITE_BASE_URL=https://your-api-endpoint.com
+```
+
+> ✅ Note: All environment variables prefixed with `VITE_` are exposed to the client (as per Vite’s convention).
+
+#### Step 2: Keep your secrets safe
+
+Make sure your `.env` file is **never committed** to version control. This project uses a `.gitignore` rule to ignore it:
+
+```bash
+# In .gitignore
+.env
+```
+
 Install dependencies and start the development server.
 
 ```bash
