@@ -8,8 +8,6 @@ runs:
       run: npm run test -- --coverage
       shell: bash
 
-    - name: Check coverage threshold
-      run: |
-        COVERAGE=$(npx coverage-check --statement 80 --branch 80)
-        echo "Coverage: $COVERAGE"
+    - name: Run tests and enforce 80% coverage
+      run: vitest run --coverage --coverage.reporter=text --coverage.threshold=80
       shell: bash
