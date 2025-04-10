@@ -2,12 +2,12 @@ name: Install and Cache
 description: Reusable step for installing dependencies with caching
 
 runs:
-  using: "composite"
+  using: 'composite'
   steps:
     - uses: actions/setup-node@v3
       with:
         node-version: 20
-        cache: "npm"
+        cache: 'npm'
 
     - name: Install dependencies
       run: npm ci

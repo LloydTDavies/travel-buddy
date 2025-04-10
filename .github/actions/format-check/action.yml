@@ -2,7 +2,7 @@ name: Format Check
 description: Checks for formatting issues
 
 runs:
-  using: "composite"
+  using: 'composite'
   steps:
     - name: Run formatter
       run: npm run format

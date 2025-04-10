@@ -2,7 +2,7 @@ name: Lint
 description: Lint the codebase
 
 runs:
-  using: "composite"
+  using: 'composite'
   steps:
     - name: Lint
       run: npm run lint
