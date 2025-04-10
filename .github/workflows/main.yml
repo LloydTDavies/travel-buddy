@@ -8,14 +8,18 @@ jobs:
   ci:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
 
-      - uses: ./.github/actions/install-and-cache
-      - uses: ./.github/actions/build
-      - uses: ./.github/actions/test
-      - uses: ./.github/actions/lint
-      - uses: ./.github/actions/format-check
+      - name: 📦 Install and Cache Dependencies
+        uses: ./.github/actions/install-and-cache
 
-      # - name: Dummy Deploy Step (future)
-      #   run: echo "Deploying to [platform]..."
-      #   shell: bash
+      - name: 🛠️ Build App
+        uses: ./.github/actions/build
+
+      - name: 🧪 Run Tests
+        uses: ./.github/actions/test
+
+      - name: 🧹 Lint Code
+        uses: ./.github/actions/lint
+
