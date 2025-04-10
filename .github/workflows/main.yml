@@ -1,0 +1,21 @@
+name: Main Branch CI
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: ./.github/actions/install-and-cache
+      - uses: ./.github/actions/build
+      - uses: ./.github/actions/test
+      - uses: ./.github/actions/lint
+      - uses: ./.github/actions/format-check
+
+      # - name: Dummy Deploy Step (future)
+      #   run: echo "Deploying to [platform]..."
+      #   shell: bash

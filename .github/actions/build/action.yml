@@ -1,0 +1,9 @@
+name: Build Project
+description: Runs the project build step
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Build
+      run: npm run build
+      shell: bash

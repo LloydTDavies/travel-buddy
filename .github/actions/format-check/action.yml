@@ -1,0 +1,14 @@
+name: Format Check
+description: Checks for formatting issues
+
+runs:
+  using: "composite"
+  steps:
+    - name: Run formatter
+      run: npm run format
+      shell: bash
+
+    - name: Check for formatting differences
+      run: |
+        git diff --exit-code || (echo "Formatting issues found. Run 'npm run format'" && exit 1)
+      shell: bash

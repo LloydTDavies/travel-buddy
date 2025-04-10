@@ -1,0 +1,15 @@
+name: Run Tests with Coverage
+description: Runs tests and checks coverage
+
+runs:
+  using: "composite"
+  steps:
+    - name: Run tests
+      run: npm run test -- --coverage
+      shell: bash
+
+    - name: Check coverage threshold
+      run: |
+        COVERAGE=$(npx coverage-check --statement 80 --branch 80)
+        echo "Coverage: $COVERAGE"
+      shell: bash
