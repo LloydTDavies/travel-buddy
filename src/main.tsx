@@ -4,6 +4,7 @@ import App from "./App.tsx";
 import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 
+// eslint-disable-next-line react-refresh/only-export-components
 const AppRoot = () => {
   return (
     <BrowserRouter>

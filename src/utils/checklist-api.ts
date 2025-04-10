@@ -18,8 +18,8 @@ export const getCheckList = async (): Promise<CheckList | undefined> => {
   }
 };
 
-export const addNewItem = async (current: Item[], newItem: Item) => {
+export const addNewItem = async (newItems: Item[]) => {
   await axios.patch(CHECKLIST_ENDPOINT, {
-    items: [...current, newItem],
+    items: newItems,
   });
 };
