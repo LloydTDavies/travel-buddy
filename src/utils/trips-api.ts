@@ -1,8 +1,11 @@
 import axios from "axios";
+import { Trip } from "../data/trips";
 
-export const getTrips = async () => {
+const TRIPS_ENDPOINT = `${import.meta.env.VITE_BASE_URL}/trips`;
+
+export const getTrips = async (): Promise<Trip[]> => {
   try {
-    const response = await axios.get("http://localhost:3001/trips");
+    const response = await axios.get(TRIPS_ENDPOINT);
     if (response.status === 200) {
       return response.data;
     } else {
@@ -14,18 +17,22 @@ export const getTrips = async () => {
     return []; // Or handle the error appropriately
   }
 };
-
-export const getTripById = async (id: string) => {
+/**
+ *
+ * @param id - ID of the trip you wish to retrieve
+ * @returns
+ */
+export const getTripById = async (id: string): Promise<Trip | undefined> => {
   try {
-    const response = await axios.get(`http://localhost:3001/trips/${id}`);
+    const response = await axios.get(`${TRIPS_ENDPOINT}/${id}`);
     if (response.status === 200) {
       return response.data;
     } else {
       console.error("Failed to fetch trips:", response.status);
-      return []; // Or handle the error appropriately
+      return undefined; // Or handle the error appropriately
     }
   } catch (error) {
     console.error("Error fetching trips:", error);
-    return []; // Or handle the error appropriately
+    return undefined; // Or handle the error appropriately
   }
 };

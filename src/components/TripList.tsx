@@ -10,8 +10,8 @@ export const TripList = ({ trips }: TripListProps) => {
   return (
     <ul className="grid grid-cols-1 lg:grid-cols-3  gap-4">
       {trips.map((trip) => (
-        <Link to={'/trips/' + trip.id}>
-          <TripCard trip={trip} key={trip.id} />
+        <Link to={"/trips/" + trip.id} key={trip.id}>
+          <TripCard trip={trip} />
         </Link>
       ))}
     </ul>

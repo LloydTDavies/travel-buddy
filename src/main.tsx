@@ -4,10 +4,20 @@ import App from "./App.tsx";
 import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
+const AppRoot = () => {
+  return (
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </React.StrictMode>
+  );
+};
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  import.meta.env.MODE === "development" ? (
+    <AppRoot />
+  ) : (
+    <React.StrictMode>
+      <AppRoot />
+    </React.StrictMode>
+  )
 );

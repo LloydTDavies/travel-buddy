@@ -37,7 +37,7 @@ const Navbar = ({ drawerId }: NavbarProps) => {
             <NavLink to="/trips">Trips</NavLink>
           </li>
           <li>
-            <a>Navbar Item 2</a>
+           <NavLink to="checklist">Checklist</NavLink>
           </li>
         </ul>
       </div>
