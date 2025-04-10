@@ -1,54 +1,48 @@
-# React + TypeScript + Vite
+# ✈️ Trip Companion App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight and intuitive app to help you manage and organize your travel plans in one place.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 📌 **Trip Management**: Add and view details about upcoming trips  
+- 🛫 **Trip Details**: Store flight, hotel, points of interest, and travel dates  
+- ☁️ **Weather Integration**: View weather forecasts for your destination (coming soon!)  
+- ✅ **Packing Checklist**: Track essential items to pack like passports and boarding passes  
 
-## Expanding the ESLint configuration
+## 📦 Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- ⚛️ React with TypeScript  
+- 🎯 Vite for fast development  
+- 🧪 Vitest & Testing Library for integration tests  
+- 💅 Tailwind CSS for styling  
+- 🧠 ESLint & Prettier for code consistency  
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
+## 🚀 Getting Started
+
+Install dependencies and start the development server.
+
+```bash
+npm ci
+npm run dev
+npm run mock:api
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## ✅ Tests
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
+Run the test suite to validate core functionality.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-});
+```bash
+npm run test
+npm run test:coverage
 ```
+
+## ⬆️ Upcoming Features
+
+- Weather API integration for real-time trip forecasts  
+- Categorized trip entries  
+- Reminder and notification system  
+- Responsive mobile-first design  
+
+## 📄 License
+
+MIT
