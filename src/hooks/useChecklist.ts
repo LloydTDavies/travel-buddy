@@ -1,6 +1,6 @@
-import { useEffect, useState, useTransition } from "react";
-import { addNewItem, getCheckList } from "../utils/checklist-api";
-import { CheckList, Item } from "../data/checklist";
+import { useEffect, useState, useTransition } from 'react';
+import { addNewItem, getCheckList } from '../utils/checklist-api';
+import { CheckList, Item } from '../data/checklist';
 
 export function useChecklist() {
   const [checklist, setChecklist] = useState<CheckList | null>(null);
@@ -35,7 +35,7 @@ export function useChecklist() {
         });
       }
     } catch (err) {
-      console.error("Failed to add item:", err);
+      console.error('Failed to add item:', err);
     }
   };
 

@@ -1,4 +1,4 @@
-import { Item } from "../data/checklist";
+import { Item } from '../data/checklist';
 
 interface CheckListItemProps {
   item: Item;

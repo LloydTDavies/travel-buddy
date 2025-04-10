@@ -1,8 +1,8 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
-import { BrowserRouter } from "react-router-dom";
-import "./index.css";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App.tsx';
+import { BrowserRouter } from 'react-router-dom';
+import './index.css';
 
 // eslint-disable-next-line react-refresh/only-export-components
 const AppRoot = () => {
@@ -13,8 +13,8 @@ const AppRoot = () => {
   );
 };
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  import.meta.env.MODE === "development" ? (
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  import.meta.env.MODE === 'development' ? (
     <AppRoot />
   ) : (
     <React.StrictMode>

@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 
 interface NavbarProps {
   drawerId: string;
@@ -9,11 +9,7 @@ const Navbar = ({ drawerId }: NavbarProps) => {
     <div className="navbar bg-base-300 w-full">
       <div className="flex-none lg:hidden">
         {/* Label to toggle the drawer specified by drawerId */}
-        <label
-          htmlFor={drawerId}
-          aria-label="open sidebar"
-          className="btn btn-square btn-ghost"
-        >
+        <label htmlFor={drawerId} aria-label="open sidebar" className="btn btn-square btn-ghost">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -37,7 +33,7 @@ const Navbar = ({ drawerId }: NavbarProps) => {
             <NavLink to="/trips">Trips</NavLink>
           </li>
           <li>
-           <NavLink to="checklist">Checklist</NavLink>
+            <NavLink to="checklist">Checklist</NavLink>
           </li>
         </ul>
       </div>

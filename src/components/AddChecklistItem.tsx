@@ -1,13 +1,13 @@
 // components/AddChecklistItem.tsx
-import { ChangeEvent, KeyboardEvent } from "react";
+import { ChangeEvent, KeyboardEvent } from 'react';
 
-interface AddChecklistItemProps  {
+interface AddChecklistItemProps {
   inputValue: string;
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
   onKeyDown: (e: KeyboardEvent<HTMLInputElement>) => void;
   onAdd: () => void;
   isPending: boolean;
-};
+}
 
 export const AddChecklistItem = ({
   inputValue,
@@ -31,7 +31,7 @@ export const AddChecklistItem = ({
         onClick={onAdd}
         disabled={!inputValue.trim() || isPending}
       >
-        {isPending ? "Saving..." : "Add"}
+        {isPending ? 'Saving...' : 'Add'}
       </button>
     </div>
   );

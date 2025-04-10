@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
-import TripList from "../components/TripList";
-import { Trip } from "../data/trips";
-import { getTrips } from "../utils/trips-api";
+import { useState, useEffect } from 'react';
+import TripList from '../components/TripList';
+import { Trip } from '../data/trips';
+import { getTrips } from '../utils/trips-api';
 
 export const TripsPage = () => {
   const [trips, setTrips] = useState<Trip[]>([]);

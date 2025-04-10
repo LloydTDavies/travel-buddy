@@ -1,12 +1,12 @@
-import { useEffect, useState } from "react";
-import { Trip } from "../data/trips";
-import { getTripImage } from "../utils/pexel-api";
+import { useEffect, useState } from 'react';
+import { Trip } from '../data/trips';
+import { getTripImage } from '../utils/pexel-api';
 
 interface TripCardProps {
   trip: Trip;
 }
 export const TripCard = ({ trip }: TripCardProps) => {
-  const [image, setImage] = useState("");
+  const [image, setImage] = useState('');
 
   useEffect(() => {
     const fetchImg = async () => {

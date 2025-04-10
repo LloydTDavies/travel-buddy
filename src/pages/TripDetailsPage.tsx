@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
-import { Trip } from "../data/trips";
-import { getTripById } from "../utils/trips-api";
-import TripCard from "../components/TripCard";
+import { useEffect, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import { Trip } from '../data/trips';
+import { getTripById } from '../utils/trips-api';
+import TripCard from '../components/TripCard';
 
 export const TripDetailsPage = () => {
   const [trip, setTrip] = useState<Trip>();

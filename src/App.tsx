@@ -1,12 +1,12 @@
-import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Sidebar from "./components/Sidebar";
-import TripDetailsPage from "./pages/TripDetailsPage";
-import TripsPage from "./pages/TripsPage";
-import CheckListBuilderPage from "./pages/CheckListBuilderPage";
+import { Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Sidebar from './components/Sidebar';
+import TripDetailsPage from './pages/TripDetailsPage';
+import TripsPage from './pages/TripsPage';
+import CheckListBuilderPage from './pages/CheckListBuilderPage';
 
 function App() {
-  const drawerId = "travel-buddy-drawer";
+  const drawerId = 'travel-buddy-drawer';
 
   return (
     <div className="drawer">
@@ -15,12 +15,10 @@ function App() {
         <Navbar drawerId={drawerId} />
         <div className="p-4">
           <Routes>
-            <Route path="/" element={<TripsPage />} />{" "}
-            {/* Default or home page */}
-            <Route path="/trips" element={<TripsPage />} />{" "}
-            {/* Dedicated trip list page */}
-            <Route path="/trips/:id" element={<TripDetailsPage />} />{" "}
-            <Route path="/checklist" element={<CheckListBuilderPage />} />{" "}
+            <Route path="/" element={<TripsPage />} /> {/* Default or home page */}
+            <Route path="/trips" element={<TripsPage />} /> {/* Dedicated trip list page */}
+            <Route path="/trips/:id" element={<TripDetailsPage />} />{' '}
+            <Route path="/checklist" element={<CheckListBuilderPage />} />{' '}
             {/* Dynamic route for trip details */}
             {/* <Route path="/add-trip" element={<AddTrip />} />
            

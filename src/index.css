@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 @plugin "daisyui" {
-  themes: caramellatte --default, sunset --prefersdark;
+  themes:
+    caramellatte --default,
+    sunset --prefersdark;
 }

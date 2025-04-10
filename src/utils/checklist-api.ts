@@ -1,5 +1,5 @@
-import axios from "axios";
-import { CheckList, Item } from "../data/checklist";
+import axios from 'axios';
+import { CheckList, Item } from '../data/checklist';
 
 const CHECKLIST_ENDPOINT = `${import.meta.env.VITE_BASE_URL}/checklist`;
 
@@ -9,11 +9,11 @@ export const getCheckList = async (): Promise<CheckList | undefined> => {
     if (response.status === 200) {
       return response.data;
     } else {
-      console.error("Failed to fetch checklist:", response.status);
+      console.error('Failed to fetch checklist:', response.status);
       return undefined; // Or handle the error appropriately
     }
   } catch (error) {
-    console.error("Error fetching checklist:", error);
+    console.error('Error fetching checklist:', error);
     return undefined; // Or handle the error appropriately
   }
 };

@@ -1,11 +1,10 @@
-import { useChecklist } from "../hooks/useChecklist";
-import CheckListItem from "../components/CheckListItem";
-import AddChecklistItem from "../components/AddChecklistItem";
-import { useChecklistInput } from "../hooks/useCheckListInput";
+import { useChecklist } from '../hooks/useChecklist';
+import CheckListItem from '../components/CheckListItem';
+import AddChecklistItem from '../components/AddChecklistItem';
+import { useChecklistInput } from '../hooks/useCheckListInput';
 export const CheckListBuilderPage = () => {
   const { checklist, isLoading, isPending, addItem } = useChecklist();
-  const { inputValue, handleChange, handleKeyDown, handleAdd } =
-    useChecklistInput(addItem);
+  const { inputValue, handleChange, handleKeyDown, handleAdd } = useChecklistInput(addItem);
 
   if (isLoading || !checklist) {
     return <div className="p-4 text-sm opacity-70">Loading checklist...</div>;
