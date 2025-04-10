@@ -1,3 +1,5 @@
+![CI](https://github.com/LloydTDavies/travel-buddy/actions/workflows/main.yml/badge.svg)
+
 # ✈️ Trip Companion App
 
 A lightweight and intuitive app to help you manage and organize your travel plans in one place.
