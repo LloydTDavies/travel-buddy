@@ -1,14 +1,27 @@
-name: Install and Cache
-description: Reusable step for installing dependencies with caching
+name: Install and Cache Dependencies
+
+description: Setup Node.js, restore npm and Vite caches, and install dependencies.
 
 runs:
   using: 'composite'
   steps:
-    - uses: actions/setup-node@v3
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
       with:
         node-version: 20
         cache: 'npm'
+        cache-dependency-path: package-lock.json
+
+    - name: Cache Vite build cache
+      uses: actions/cache@v3
+      with:
+        path: |
+          .vite
+          node_modules/.vite
+        key: ${{ runner.os }}-vite-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-vite-
 
     - name: Install dependencies
-      run: npm ci
       shell: bash
+      run: npm ci
