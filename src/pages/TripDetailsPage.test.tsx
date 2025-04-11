@@ -2,12 +2,11 @@ import { render, screen } from '@testing-library/react';
 import { vi, Mock } from 'vitest';
 import TripDetailsPage from './TripDetailsPage';
 import * as tripsApi from '../utils/trips-api';
+import * as pexelsApi from '../utils/pexel-api';
 import { MemoryRouter, Routes, Route } from 'react-router-dom';
 
 vi.mock('../utils/trips-api');
-vi.mock('../utils/pexels', () => ({
-  searchImages: vi.fn(() => Promise.resolve([{ src: { medium: 'test.jpg' } }])),
-}));
+vi.mock('../utils/pexel-api');
 
 describe('Trip Details Page', () => {
   beforeEach(() => {
@@ -51,6 +50,7 @@ describe('Trip Details Page', () => {
         },
       ],
     }));
+    (pexelsApi.getTripImage as Mock).mockResolvedValueOnce([{ src: { medium: 'test.jpg' } }]);
     render(
       <MemoryRouter initialEntries={['/trips/123']}>
         <Routes>
