@@ -5,6 +5,9 @@ import CheckListBuilderPage from './CheckListBuilderPage';
 import * as checklistApi from '../utils/checklist-api';
 
 vi.mock('../utils/checklist-api');
+vi.mock('../utils/pexels', () => ({
+  searchImages: vi.fn(() => Promise.resolve([{ src: { medium: 'test.jpg' } }])),
+}));
 
 describe('Check List Builder Page', async () => {
   it('adds a new item after clicking add', async () => {

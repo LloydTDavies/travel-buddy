@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import ThemeController from './ThemeController';
 
 interface NavbarProps {
   drawerId: string;
@@ -36,6 +37,7 @@ const Navbar = ({ drawerId }: NavbarProps) => {
             <NavLink to="checklist">Checklist</NavLink>
           </li>
         </ul>
+        <ThemeController />
       </div>
     </div>
   );

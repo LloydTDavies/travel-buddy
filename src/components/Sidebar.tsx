@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import ThemeController from './ThemeController';
 
 interface SidebarProps {
   drawerId: string;
@@ -14,6 +15,9 @@ const Sidebar = ({ drawerId }: SidebarProps) => {
         </li>
         <li>
           <NavLink to="/checklist">Checklist</NavLink>
+        </li>
+        <li>
+          <ThemeController />
         </li>
       </ul>
     </div>

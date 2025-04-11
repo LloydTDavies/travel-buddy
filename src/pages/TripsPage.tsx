@@ -1,19 +1,8 @@
-import { useState, useEffect } from 'react';
 import TripList from '../components/TripList';
-import { Trip } from '../data/trips';
-import { getTrips } from '../utils/trips-api';
+import { useTrips } from '../hooks/useTrips';
 
 export const TripsPage = () => {
-  const [trips, setTrips] = useState<Trip[]>([]);
-
-  useEffect(() => {
-    const fetchTrips = async () => {
-      const data = await getTrips();
-      setTrips(data);
-    };
-
-    fetchTrips();
-  }, []);
+  const { trips } = useTrips();
 
   return (
     <>

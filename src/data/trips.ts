@@ -1,15 +1,15 @@
-interface Booked {
+export interface Booked {
   date: string;
   time?: string; // Time is optional as it might not always be present
 }
 
-interface PointOfInterest {
+export interface PointOfInterest {
   name: string;
   type: string;
   booked?: Booked; // Booked is optional as it might not always be present
 }
 
-interface Flight {
+export interface Flight {
   departure: string;
   arrival: string;
   departureTime: string;
