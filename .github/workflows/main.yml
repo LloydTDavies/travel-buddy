@@ -22,4 +22,3 @@ jobs:
 
       - name: 🧹 Lint Code
         uses: ./.github/actions/lint
-

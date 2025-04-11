@@ -20,6 +20,8 @@
     "axios": "^1.8.4",
     "daisyui": "^5.0.17",
     "dotenv": "^16.4.7",
+    "lucide-react": "^0.487.0",
+    "moment": "^2.30.1",
     "pexels": "^1.4.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

@@ -4,7 +4,7 @@ export const getTripImage = async (location: string) => {
   const client = createClient(import.meta.env.VITE_PEXELS_API_KEY);
   try {
     const response = await client.photos.search({
-      query: location.split(',')[0],
+      query: `${location.split(',')[0]} landmarks`,
       per_page: 1,
       orientation: 'landscape',
     });

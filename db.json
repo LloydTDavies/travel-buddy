@@ -3,13 +3,13 @@
     {
       "id": 1,
       "location": "Paris, France",
-      "startDate": "2024-06-15",
-      "endDate": "2024-06-22",
+      "startDate": "2025-06-15",
+      "endDate": "2025-06-22",
       "flight": {
         "departure": "LAX",
         "arrival": "CDG",
-        "departureTime": "2024-06-15T10:30:00",
-        "arrivalTime": "2024-06-16T06:45:00",
+        "departureTime": "2025-06-15T10:30:00",
+        "arrivalTime": "2025-06-16T06:45:00",
         "airline": "Air France",
         "flightNumber": "AF377"
       },
@@ -18,7 +18,7 @@
           "name": "Eiffel Tower",
           "type": "landmarks",
           "booked": {
-            "date": "2024-06-16",
+            "date": "2025-06-16",
             "time": "14:00"
           }
         },
@@ -26,7 +26,7 @@
           "name": "Le Cheval Blanc",
           "type": "restaurants",
           "booked": {
-            "date": "2024-06-17",
+            "date": "2025-06-17",
             "time": "19:30"
           }
         },
@@ -34,7 +34,7 @@
           "name": "Louvre Museum",
           "type": "landmarks",
           "booked": {
-            "date": "2024-06-18",
+            "date": "2025-06-18",
             "time": "10:00"
           }
         }
@@ -43,13 +43,13 @@
     {
       "id": 2,
       "location": "Tokyo, Japan",
-      "startDate": "2024-08-10",
-      "endDate": "2024-08-20",
+      "startDate": "2025-08-10",
+      "endDate": "2025-08-20",
       "flight": {
         "departure": "LAX",
         "arrival": "HND",
-        "departureTime": "2024-08-10T13:15:00",
-        "arrivalTime": "2024-08-11T17:30:00",
+        "departureTime": "2025-08-10T13:15:00",
+        "arrivalTime": "2025-08-11T17:30:00",
         "airline": "ANA",
         "flightNumber": "NH105"
       },
@@ -58,7 +58,7 @@
           "name": "TeamLab Planets",
           "type": "activities",
           "booked": {
-            "date": "2024-08-12",
+            "date": "2025-08-12",
             "time": "11:00"
           }
         },
@@ -66,7 +66,7 @@
           "name": "Sushi Saito",
           "type": "restaurants",
           "booked": {
-            "date": "2024-08-13",
+            "date": "2025-08-13",
             "time": "19:00"
           }
         },
@@ -74,7 +74,7 @@
           "name": "Summer Sonic Festival",
           "type": "events",
           "booked": {
-            "date": "2024-08-15",
+            "date": "2025-08-15",
             "time": "12:00"
           }
         }
@@ -83,13 +83,13 @@
     {
       "id": 3,
       "location": "Barcelona, Spain",
-      "startDate": "2024-09-20",
-      "endDate": "2024-09-27",
+      "startDate": "2025-09-20",
+      "endDate": "2025-09-27",
       "flight": {
         "departure": "LAX",
         "arrival": "BCN",
-        "departureTime": "2024-09-20T16:45:00",
-        "arrivalTime": "2024-09-21T13:20:00",
+        "departureTime": "2025-09-20T16:45:00",
+        "arrivalTime": "2025-09-21T13:20:00",
         "airline": "Iberia",
         "flightNumber": "IB6170"
       },
@@ -98,7 +98,7 @@
           "name": "Sagrada Familia",
           "type": "landmarks",
           "booked": {
-            "date": "2024-09-22",
+            "date": "2025-09-22",
             "time": "10:30"
           }
         },
@@ -106,7 +106,7 @@
           "name": "Tickets Bar",
           "type": "restaurants",
           "booked": {
-            "date": "2024-09-23",
+            "date": "2025-09-23",
             "time": "20:30"
           }
         },
@@ -114,7 +114,7 @@
           "name": "Flamenco Show at Tablao Cordobes",
           "type": "events",
           "booked": {
-            "date": "2024-09-24",
+            "date": "2025-09-24",
             "time": "21:00"
           }
         }
