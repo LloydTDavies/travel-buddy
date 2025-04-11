@@ -5,6 +5,9 @@ import * as tripsApi from '../utils/trips-api';
 import { MemoryRouter, Routes, Route } from 'react-router-dom';
 
 vi.mock('../utils/trips-api');
+vi.mock('../utils/pexels', () => ({
+  searchImages: vi.fn(() => Promise.resolve([{ src: { medium: 'test.jpg' } }])),
+}));
 
 describe('Trip Details Page', () => {
   beforeEach(() => {
